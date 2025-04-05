@@ -1,3 +1,24 @@
+/*
+ * IPO
+ *
+ * Input: loaiKhachHang, maKhachHang, kenhCaoCap, soKetNoi, tienCap
+ *
+ * Process:
+ * _ B1: Khai báo biến và gán lại giá trị
+ * _ B2: Xét điều kiện:
+ * Nếu khách hàng === doanh nghiệp:
+ *  + soKetNoi >= 1 && soKetNoi <= 10 thì tiền kết nối = 75 * soKetNoi
+ *  + soKetNoi > 10 thì tiền kết nối = (soKetNoi - 10) * 5 + (10 * 75)
+ *  + tiền kênh cao cấp = 50
+ * _ B3: Tính tiền cáp:
+ * Nếu khách hàng === doanh nghiệp:
+ * tienCap = (soKetNoi - 10) * 5 + (10 * 75) + (kenhCaoCap * 50)
+ * Nếu khách hàng === cá nhân:
+ * tienCap = 4.5 + 20.5 + 7.5 * kenhCaoCap
+ *
+ * Output: Tiền cáp phải trả
+ */
+
 document.getElementById("cable-btn").onclick = function () {
   let loaiKhachHang = "";
   let maKhachHang = "";
@@ -32,7 +53,7 @@ document.getElementById("cable-btn").onclick = function () {
 
   document.getElementById(
     "cable-result"
-  ).innerHTML = `Mã khách hàng: ${maKhachHang}; Tiền cáp cá nhân: ${tienCap};`;
+  ).innerHTML = `Mã khách hàng: ${maKhachHang} <br> Tiền phải trả là: ${tienCap.toLocaleString()} $;`;
 };
 
 document.getElementById("cableCustomerType").onchange = function () {

@@ -15,13 +15,11 @@
  * Output: đậu hay rớt
  */
 
-//* Hàm tính tổng điểm
 const tinhTongDiem = (diem1, diem2, diem3, diemKhuVuc, diemDoiTuong) => {
   tongDiem = diem1 + diem2 + diem3 + diemKhuVuc + diemDoiTuong;
   return tongDiem;
 };
 
-//* Hàm xét tuyển
 const xetTuyen = () => {
   let diemChuan = Number(document.getElementById("inputDiemChuan").value);
   let diem1 = Number(document.getElementById("inputDiem1").value);
@@ -29,23 +27,20 @@ const xetTuyen = () => {
   let diem3 = Number(document.getElementById("inputDiem3").value);
   let diemKhuVuc = Number(document.getElementById("selectKhuVuc").value);
   let diemDoiTuong = Number(document.getElementById("selectDoiTuong").value);
-  console.log("diem1, diem2, diem3, diemKhuVuc, diemDoiTuong");
 
-  //* Gọi hàm tính tổng điểm có return
   let tongDiem = tinhTongDiem(diem1, diem2, diem3, diemKhuVuc, diemDoiTuong);
 
   let result1 = document.getElementById("result1");
 
   let ketQua = `
-    Điểm môn 1: ${diem1} <br>
-    Điểm môn 2: ${diem2} <br>
-    Điểm môn 3: ${diem3} <br>
-    Điểm khu vực: ${diemKhuVuc} <br>
-    Điểm đối tượng: ${diemDoiTuong} <br>
-    Tổng điểm: ${tongDiem}
-`;
+      Điểm môn 1: ${diem1} <br>
+      Điểm môn 2: ${diem2} <br>
+      Điểm môn 3: ${diem3} <br>
+      Điểm khu vực: ${diemKhuVuc} <br>
+      Điểm đối tượng: ${diemDoiTuong} <br>
+      <br>
+  `;
 
-  //* Kiểm tra điều kiện đậu/rớt
   if (tongDiem >= diemChuan && diem1 > 0 && diem2 > 0 && diem3 > 0) {
     ketQua += `Bạn đã đậu! Tổng điểm: ${tongDiem}`;
     result1.innerHTML = ketQua;

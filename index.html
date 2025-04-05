@@ -20,14 +20,14 @@
         <section class="py-5">
             <div class="card shadow-lg p-4">
 
-                <h1 class="text-danger text-center">Quản lý tuyển sinh</h1>
+                <h1 class="text-danger text-center text-info-emphasis">Quản lý tuyển sinh</h1>
 
-                <div class="col-4">
+                <div class="col-4 mb-3">
 
                     <input placeholder="Nhập điểm chuẩn" type="number" class="form-control" id="inputDiemChuan">
                 </div>
 
-                <div class="col-4">
+                <div class="col-4 mb-3">
                     <select class="form-select" id="selectKhuVuc">
                         <option>Chọn khu vực</option>
                         <option value="0">X</option>
@@ -36,10 +36,9 @@
                         <option value="0.5">C</option>
                     </select>
 
-
                 </div>
 
-                <div class="col-4">
+                <div class="col-4 mb-3">
                     <select class="form-select" id="selectDoiTuong">
                         <option>Chọn đối tượng</option>
                         <option value="0">Không thuộc đối tượng ưu tiên</option>
@@ -50,21 +49,21 @@
 
                 </div>
 
-                <div class="col-4">
+                <div class="col-4 mb-3">
                     <input placeholder="Nhập điểm 1" type="number" class="form-control" id="inputDiem1">
                 </div>
 
-                <div class="col-4">
+                <div class="col-4 mb-3">
                     <input placeholder="Nhập điểm 2" type="number" class="form-control" id="inputDiem2">
                 </div>
 
-                <div class="col-4">
+                <div class="col-4 mb-3">
                     <input placeholder="Nhập điểm 3" type="number" class="form-control" id="inputDiem3">
                 </div>
 
-                <button id="btnSubmit1" type="button" class="mb-3 btn btn-primary w-50">Tính điểm</button>
+                <button id="btnSubmit1" type="button" class="mb-3 btn btn-primary w-50 mt-4">Kết quả</button>
 
-                <div class=" alert alert-primary w-50" id="result1" role="alert">
+                <div class=" alert alert-info w-50" id="result1" role="alert">
                 </div>
             </div>
         </section>
@@ -72,26 +71,26 @@
         <!-- Tính tiền điện -->
         <section id="electricity-calc" class="py-5">
             <div class="card shadow-lg p-4">
-                <h1 class="text-danger text-center">Tính Tiền Điện</h1>
+                <h1 class="text-danger text-center text-info-emphasis">Tính tiền điện</h1>
 
-                <div class="mb-3">
+                <div class="mb-3 w-50">
                     <label for="electricity-name" class="form-label fw-bold">Họ và Tên</label>
                     <input type="text" class="form-control" id="electricity-name" required
                         placeholder="Nhập họ và tên" />
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3 w-50">
                     <label for="electricity-usage" class="form-label fw-bold">Số kWh tiêu thụ</label>
                     <input type="number" class="form-control" id="electricity-usage" required
                         placeholder="Nhập số kWh" />
                 </div>
 
-                <button class="btn btn-primary btn-lg w-100 mt-4" id="electricity-btn">
+                <button class="btn btn-primary btn-lg w-50 mt-4" id="electricity-btn">
                     Tính Tiền Điện
                 </button>
 
-                <div class="mt-3">
-                    <p id="electricity-result" class="alert alert-info text-center" style="display: none"></p>
+                <div class="mt-3 ">
+                    <p id="electricity-result" class="alert alert-info text-center w-50" style="display: none"></p>
                 </div>
             </div>
         </section>
@@ -99,28 +98,28 @@
         <!-- Thuế thu nhập cá nhân -->
         <section id="electricity-calc" class="py-5">
             <div class="card shadow-lg p-4">
-                <h1 class="text-danger text-center"> Thuế thu nhâp cá nhân</h1>
+                <h1 class="text-danger text-center text-info-emphasis"> Thuế thu nhâp cá nhân</h1>
 
-                <div class="mb-3">
+                <div class="mb-3 w-50">
                     <label for="thueName" class="form-label fw-bold">Họ và Tên</label>
                     <input type="text" class="form-control" id="thueName" required />
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3 w-50">
                     <label for="tongThuNhap" class="form-label fw-bold">Tổng thu nhâp cá nhân</label>
                     <input type="number" class="form-control" id="tongThuNhap" required />
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3 w-50">
                     <label for="nguoiPhuThuoc" class="form-label fw-bold">Số người phụ thuộc</label>
                     <input type="number" class="form-control" id="nguoiPhuThuoc" required />
                 </div>
 
-                <button class="btn btn-primary btn-lg w-100 mt-4" id="thueThuNhap-btn">
+                <button class="btn btn-primary btn-lg mt-4 w-50" id="thueThuNhap-btn">
                     Tính tiền Thuế
                 </button>
 
-                <div class="mt-3">
+                <div class="mt-3 w-50">
                     <p id="thueResult" class="alert alert-info text-center" style="display: none"></p>
                 </div>
             </div>
@@ -129,9 +128,9 @@
         <!-- Tính tiền cáp -->
         <section id="cable-calc" class="py-5">
             <div class="card shadow-lg p-4">
-                <h1 class="text-danger text-center">TÍNH TIỀN CÁP</h1>
+                <h1 class="text-danger text-center text-info-emphasis">Tính tiền cáp</h1>
 
-                <div class="mb-3">
+                <div class="mb-3 w-50 ">
                     <label for="cable-customer-type" class="form-label fw-bold">Chọn loại khách hàng</label>
                     <select class="form-select" id="cableCustomerType">
                         <option value="" selected>-- Chọn loại khách hàng --</option>
@@ -140,30 +139,30 @@
                     </select>
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3 w-50">
                     <label for="cableCustomer" class="form-label fw-bold">Mã khách hàng</label>
                     <input type="text" class="form-control" id="cableCustomer" placeholder="Nhập mã khách hàng" />
                 </div>
 
-                <div class="mb-3" id="cable-business-connection-group">
+                <div class="mb-3 w-50" id="cable-business-connection-group">
                     <label for="cableBusinessConnection" class="form-label fw-bold">Số kết nối (Chỉ dành cho Doanh
                         nghiệp)</label>
                     <input type="number" class="form-control" id="cableBusinessConnection"
                         placeholder="Nhập số kết nối" />
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3 w-50">
                     <label for="cablePremiumChannels" class="form-label fw-bold">Số kênh cao cấp</label>
                     <input type="number" class="form-control" id="cablePremiumChannels"
                         placeholder="Nhập số kênh cao cấp" />
                 </div>
 
-                <button class="btn btn-primary btn-lg w-100 mt-4" id="cable-btn" onclick="calculateCableBill()">
+                <button class="btn btn-primary btn-lg w-50 mt-4" id="cable-btn" onclick="calculateCableBill()">
                     Tính tiền cáp
                 </button>
 
                 <div class="mt-3">
-                    <p id="cable-result" class="alert alert-info text-center" style="display: none"></p>
+                    <p id="cable-result" class="alert alert-info text-center w-50 " style="display: none"></p>
                 </div>
             </div>
         </section>
